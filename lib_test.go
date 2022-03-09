@@ -7,5 +7,5 @@ import (
 )
 
 func TestGreet(t *testing.T){
-  glf.Greet("Matthew")
+  gfl.Greet("Matthew")
 }

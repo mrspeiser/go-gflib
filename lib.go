@@ -4,6 +4,6 @@ import (
   "fmt"
 )
 
-func Greet(string name){
+func Greet(name string){
   fmt.Printf("Hello %s!",name)
 }
