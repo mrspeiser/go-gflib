@@ -24,10 +24,10 @@ func GetAlnums() string {
 
 func SetSeed(){
   /*
-    Seed uses the provided seed value to initialize the default Source to a deterministic state. 
-    If Seed is not called, the generator behaves as if seeded by Seed(1). 
-    Seed values that have the same remainder when divided by 2³¹-1 
-    generate the same pseudo-random sequence. 
+    Seed uses the provided seed value to initialize the default Source to a deterministic state.
+    If Seed is not called, the generator behaves as if seeded by Seed(1).
+    Seed values that have the same remainder when divided by 2³¹-1
+    generate the same pseudo-random sequence.
     Seed, unlike the Rand.Seed method, is safe for concurrent use.
   */
   rand.Seed(time.Now().UTC().UnixNano())
@@ -195,9 +195,19 @@ func OpenFileReadWrite(filename string) (file *os.File) {
 func WriteToFile(file *os.File, content []byte) int {
   f := file
   data := content
-  out, err := f.Write(data)
-  if err != nil {
+  //out, err := f.Write(data)
+  if _, err := f.Write(data); err != nil {
     fmt.Printf("WriteToFile Error! %s",err)
   }
   return 0
+}
+
+func AddIntegers(num1 int, num2 int) int{
+    sum := num1 + num2
+    return sum
+}
+
+func SubtractIntegers(num1 int, num2 int) int{
+    difference := num1 - num2
+    return difference
 }
