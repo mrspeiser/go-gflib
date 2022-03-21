@@ -81,10 +81,20 @@ func TestOpenFileReadOnly(t *testing.T){
   fmt.Println("\nbytes read: ", rd)
   fmt.Println("bytestream to string: ", string(buffer))
 
-  d := []byte("test write 987")
+  d := []byte("Should not write")
   r, writeerr := f.Write(d)
   if writeerr != nil {
     fmt.Printf("Error! %s",writeerr)
   }
   fmt.Println(r)
+}
+
+func TestAddIntegers(t *testing.T){
+    STest := gfl.AddIntegers(10,2)
+    fmt.Printf("\nthe sum is: %d \n", STest)
+}
+
+func TestSubtractIntegers(t *testing.T){
+    DTest := gfl.SubtractIntegers(10,2)
+    fmt.Printf("the difference is: %d \n", DTest)
 }
