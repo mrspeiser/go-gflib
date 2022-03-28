@@ -98,3 +98,29 @@ func TestSubtractIntegers(t *testing.T){
     DTest := gfl.SubtractIntegers(10,2)
     fmt.Printf("the difference is: %d \n", DTest)
 }
+
+func TestMultiplyIntegers(t *testing.T){
+  int1 := 411
+  int2 := 122
+  result := gfl.MultiplyIntegers(int1,int2)
+  fmt.Printf("the product is: %d \n",result)
+}
+
+func TestDivideIntegers(t *testing.T){
+  int1 := 400
+  int2 := 101
+  result := gfl.DivideIntegers(int1,int2)
+  fmt.Printf("the quotient is: %d \n",result)
+}
+
+func TestBinaryExponent(t *testing.T){
+  result := gfl.BinaryExponent(30)
+  fmt.Printf("the result of 2^30 is: %d \n",result)
+}
+
+func TestMax32BitInteger(t *testing.T){
+  result := gfl.BinaryExponent(32)
+  max32int := gfl.DivideIntegers(result,2)
+  fmt.Printf("the max positive 32 bit integer is: %d \n",max32int)
+}
+
