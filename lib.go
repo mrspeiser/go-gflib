@@ -3,6 +3,7 @@ package gfl
 import (
   "fmt"
   "math/rand"
+  "math"
   "time"
   "os"
 )
@@ -208,6 +209,30 @@ func AddIntegers(num1 int, num2 int) int{
 }
 
 func SubtractIntegers(num1 int, num2 int) int{
-    difference := num1 - num2
-    return difference
+  difference := num1 - num2
+  return difference
+}
+
+func MultiplyIntegers(num1 int, num2 int) int{
+  product := num1 * num2
+  return product
+}
+
+func DivideIntegers(num1 int, num2 int) int {
+  /*
+    Cuts off decimals and returns integer
+  */
+  quotient := num1 / num2
+  return quotient
+}
+
+func DivideFloats(num1 float32, num2 float32) float32 {
+  quotient := num1 / num2
+  return quotient
+}
+
+func BinaryExponent(power float64) int {
+  pow := power
+  result := int(math.Pow(2,pow))
+  return result
 }
