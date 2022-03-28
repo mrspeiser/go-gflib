@@ -236,3 +236,31 @@ func BinaryExponent(power float64) int {
   result := int(math.Pow(2,pow))
   return result
 }
+
+func DoStuff(input string) string {
+    return input
+}
+
+func FactorialRecursive(input int) int {
+    if input == 1{
+        return input
+    }
+    return input*FactorialRecursive(input-1)
+}
+
+func Permutations(options int, choices int) int{
+    total_permutations := FactorialRecursive(options)/FactorialRecursive(options-choices)
+    return total_permutations
+}
+
+func Combinations(options int, choices int) int{
+    total_combinations :=
+        FactorialRecursive(options)/(FactorialRecursive(options-choices)*FactorialRecursive(choices))
+
+    return total_combinations
+}
+
+func PermutationsWithRep(options float64, choices float64) int{
+    permutation_with_rep := int(math.Pow(options,choices))
+    return permutation_with_rep
+}

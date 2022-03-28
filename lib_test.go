@@ -124,3 +124,22 @@ func TestMax32BitInteger(t *testing.T){
   fmt.Printf("the max positive 32 bit integer is: %d \n",max32int)
 }
 
+func TestFactorialRecursive (t *testing.T){
+    result := gfl.FactorialRecursive(5)
+    fmt.Printf("the factorial of 5 is: %d \n", result)
+}
+
+func TestPermutations(t *testing.T){
+    result := gfl.Permutations(5,3)
+    fmt.Printf("the total permutations of 5 options and 3 choices is: %d \n", result)
+}
+
+func TestCombinations(t *testing.T){
+    result := gfl.Combinations(5,3)
+    fmt.Printf("the total Combinations of 5 options and 3 choices is: %d \n", result)
+}
+
+func TestPermutationsWithRep(t *testing.T){
+    result := gfl.PermutationsWithRep(5,3)
+    fmt.Printf("the total permutations with repititions of 5 options and 3 choices is: %d \n", result)
+}
