@@ -143,3 +143,14 @@ func TestPermutationsWithRep(t *testing.T){
     result := gfl.PermutationsWithRep(5,3)
     fmt.Printf("the total permutations with repititions of 5 options and 3 choices is: %d \n", result)
 }
+
+func TestModifyStringMap(t *testing.T){
+  mymap := make(map[string]string)
+  key := "foo"
+  value := "bar"
+  fmt.Printf("\n")
+  gfl.PrintMap(mymap)
+  gfl.ModifyStringMap(&mymap,key,value)
+  gfl.PrintMap(mymap)
+
+}

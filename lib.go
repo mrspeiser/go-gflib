@@ -264,3 +264,18 @@ func PermutationsWithRep(options float64, choices float64) int{
     permutation_with_rep := int(math.Pow(options,choices))
     return permutation_with_rep
 }
+
+func ModifyStringMap(map1 *map[string]string, key string, value string){
+  (*map1)[key] = value;
+}
+
+func PrintMap(map1 map[string]string){
+  if len(map1) == 0 {
+    fmt.Printf("{}\n")
+  } else {
+    for k,v := range map1 {
+      fmt.Printf("%s: %s\n",k,v)
+    }
+  }
+}
+
