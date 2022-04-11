@@ -154,3 +154,48 @@ func TestModifyStringMap(t *testing.T){
   gfl.PrintMap(mymap)
 
 }
+
+type Node struct {
+    next *Node
+    prev *Node
+    key interface{}
+}
+
+type List struct {
+    tail *Node
+    head *Node
+}
+func (LinkedList *List) Insert(key interface{}) {
+    new_head:= &Node{
+        prev: LinkedList.head,
+        key: key,
+    }
+    if LinkedList.head != nil {
+        LinkedList.head.next = new_head
+    }
+    LinkedList.head = new_head
+
+    if LinkedList.tail == nil {
+        LinkedList.tail = LinkedList.head
+    }
+}
+
+func Display(list *Node) {
+	for list != nil {
+		fmt.Printf("%v ->", list.key)
+		list = list.next
+	}
+	fmt.Println()
+}
+
+func TestLinkedList (t *testing.T){
+
+    linkedlist :=List{}
+    linkedlist.Insert(1)
+    linkedlist.Insert(2)
+    linkedlist.Insert(3)
+    linkedlist.Insert(4)
+    linkedlist.Insert(5)
+
+    fmt.Printf(linkedlist)
+}
