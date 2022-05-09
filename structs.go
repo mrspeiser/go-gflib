@@ -31,7 +31,7 @@ func (LinkedList *List) Insert(key interface{}) {
 }
 
 func (LinkedList *List) Display() {
-	node := LinkedList.head
+	node := LinkedList.tail
 	for node != nil {
 		fmt.Printf("%+v ->", node.key)
 		node = node.next
